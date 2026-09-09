@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/badge/platform-Tampermonkey%20%7C%20Violentmonkey%20%7C%20ScriptCat-orange.svg)](https://www.tampermonkey.net/)
 [![Target](https://img.shields.io/badge/target-yuketang.cn-informational.svg)](https://www.yuketang.cn/)
 
-专为**雨课堂（yuketang.cn / gdufemooc.cn）**打造的全版本视频与课件自动播放辅助工具。
+专为雨课堂（yuketang.cn / gdufemooc.cn）打造的全版本视频与课件自动播放辅助工具。
 
 本脚本专注于**课程视频与课件的自动播放**，支持倍速调节、自动下一集、后台防暂停等实用特性。遇到作业、测验与考试等答题节点时均会自动跳过，仅支持音视频与课件的自动播放。
 
