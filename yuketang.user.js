@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         雨课堂自动刷课助手（纯净视频播放版）
+// @name         雨课堂自动播放助手
 // @namespace    https://github.com/Breeze1733/yuketang-auto-player
 // @version      3.1.0
-// @description  专注于雨课堂视频与课件自动播放：支持自动倍速、自动静音、自动下一集、后台防切屏检测，遇到作业/习题自动跳过，无任何AI答题依赖
+// @description  专为雨课堂打造的课程视频与课件自动播放辅助工具：支持自动倍速、自动静音、自动下一集与后台防暂停，遇到作业/习题自动跳过（仅支持视频与课件播放）
 // @author       Breeze1733
 // @license      MIT
 // @match        *://*.yuketang.cn/*
@@ -211,7 +211,6 @@
       const raw = localStorage.getItem(Config.storageKeys.feature);
       const saved = Utils.safeJSONParse(raw, {}) || {};
       const conf = {
-        autoAI: saved.autoAI ?? false,
         autoComment: saved.autoComment ?? false,
       };
       localStorage.setItem(Config.storageKeys.feature, JSON.stringify(conf));
@@ -484,7 +483,7 @@
             <div class="mini-basic" id="mini-basic">展开</div>
             <div class="panel" id="panel">
               <div class="header" id="header">
-                雨课堂自动刷课助手（纯净版）
+                雨课堂自动播放助手
                 <div class='tools'>
                   <ul>
                     <li class='minimality' id="minimality">_</li>
@@ -494,7 +493,7 @@
               </div>
               <div class="body">
                 <ul class="info" id="info">
-                  <li>⭐ <strong>版本：</strong>v${Config.version}（纯净视频播放版）</li>
+                  <li>⭐ <strong>版本：</strong>v${Config.version}</li>
                   <li>🎬 <strong>功能定位：</strong>专注于课程视频播放与课件翻页，遇到作业/习题自动跳过</li>
                   <li>⚡ <strong>核心特性：</strong>自动倍速、自动静音、自动下一集、后台防切屏挂机</li>
                   <li>⚙️ 点击<span style="color:#52c41a">[播放设置]</span>可调节倍速与课件翻页间隔</li>
@@ -524,7 +523,7 @@
                 </div>
                 <div class="form-item" style="background:#f8f9fa;padding:10px;border-radius:6px;border:1px solid #e9ecef;font-size:12px;color:#666;line-height:1.6;">
                   💡 <strong>关于作业与测验：</strong><br>
-                  本脚本已完全移除 AI 答题功能，定位为纯课程视频播放。遇到所有作业、课后习题、测验节点时，脚本均会自动跳过并继续播放后续视频。
+                  本脚本仅支持课程视频与课件播放。遇到作业、课后习题、测验等节点时，脚本会自动跳过并继续播放后续视频。
                 </div>
                 <div class="settings-footer">
                   <button id="save_settings">保存并关闭</button>
